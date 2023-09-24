@@ -25,4 +25,5 @@ else
 	require("plugins.comment")
 	require("plugins.autotag")
 	require("plugins.bufferline")
+	require("plugins.dashboard")
 end
