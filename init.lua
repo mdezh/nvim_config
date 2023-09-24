@@ -23,4 +23,5 @@ else
 	require("plugins.outline")
 	require("plugins.autopairs")
 	require("plugins.comment")
+	require("plugins.autotag")
 end

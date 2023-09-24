@@ -66,4 +66,5 @@ require("lazy").setup({
 		opts = {}, -- this is equalent to setup({}) function
 	},
 	{ "terrortylor/nvim-comment" },
+	{ "windwp/nvim-ts-autotag" },
 })
