@@ -22,4 +22,5 @@ else
 	require("plugins.toggleterm")
 	require("plugins.outline")
 	require("plugins.autopairs")
+	require("plugins.comment")
 end

@@ -65,4 +65,5 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {}, -- this is equalent to setup({}) function
 	},
+	{ "terrortylor/nvim-comment" },
 })
