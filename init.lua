@@ -19,4 +19,5 @@ else
 	require("plugins.null_ls")
 	require("plugins.lualine")
 	require("plugins.gitsigns")
+	require("plugins.toggleterm")
 end
