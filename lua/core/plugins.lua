@@ -75,6 +75,7 @@ require("lazy").setup({
 		end,
 	},
 	{ "lewis6991/gitsigns.nvim" },
+	{ "f-person/git-blame.nvim" },
 	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 	{ "Djancyp/outline" },
 	{
