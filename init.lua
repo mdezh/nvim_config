@@ -10,7 +10,7 @@ else
 	require("core.colors")
 
 	-- Plugins
-	require("plugins.neotree")
+	require("plugins.neo-tree")
 	require("plugins.treesitter")
 	require("plugins.lsp")
 	require("plugins.cmp")
