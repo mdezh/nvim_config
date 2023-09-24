@@ -111,3 +111,5 @@ require("lazy").setup({
 	{ "hrsh7th/vim-vsnip" },
 	{ "hrsh7th/vim-vsnip-integ" },
 })
+
+vim.keymap.set("n", "<leader>L", ":Lazy<CR>")
