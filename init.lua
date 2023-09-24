@@ -20,4 +20,5 @@ else
 	require("plugins.lualine")
 	require("plugins.gitsigns")
 	require("plugins.toggleterm")
+	require("plugins.outline")
 end

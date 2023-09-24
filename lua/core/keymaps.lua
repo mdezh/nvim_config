@@ -22,9 +22,10 @@ keymap.set({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 keymap.set({ "n", "v" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 keymap.set({ "n", "v" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 
--- use jk to exit insert mode
-keymap.set({ "v", "i" }, "\\'", "<ESC>")
-keymap.set({ "v", "i" }, "\\э", "<ESC>")
+-- use jj to exit insert mode
+-- keymap.set({ "v", "i" }, "\\'", "<ESC>")
+-- keymap.set({ "v", "i" }, "\\э", "<ESC>")
+keymap.set("i", "jj", "<ESC>")
 
 -- unbind ins toggle
 keymap.set("i", "<Ins>", "<ESC>")
@@ -41,14 +42,13 @@ keymap.set("i", "<Ins>", "<ESC>")
 -- keymap({ "n", "v", "x", "t" }, "<leader>d", '"_d')
 
 -- copy default reg to/from system/mouse clipboard
-keymap.set({"n", "v", "x"}, '<Leader>y', ':let @+=@"<CR>')
-keymap.set({"n", "v", "x"}, '<Leader>p', ':let @"=@+<CR>')
-keymap.set({"n", "v", "x"}, '<Leader>Y', ':let @*=@"<CR>')
-keymap.set({"n", "v", "x"}, '<Leader>P', ':let @"=@*<CR>')
-
+keymap.set({ "n", "v", "x" }, "<Leader>y", ':let @+=@"<CR>')
+keymap.set({ "n", "v", "x" }, "<Leader>p", ':let @"=@+<CR>')
+keymap.set({ "n", "v", "x" }, "<Leader>Y", ':let @*=@"<CR>')
+keymap.set({ "n", "v", "x" }, "<Leader>P", ':let @"=@*<CR>')
 
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>h", ":nohl<CR>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -125,12 +125,9 @@ keymap.set({ "i", "v", "x", "t" }, "<C-a>", "<C-\\><C-n>ggVG", { noremap = true,
 ----------------------
 
 -- NeoTree
-keymap.set('n', '<leader>e', ':Neotree float focus<CR>')
-keymap.set('n', '<leader>o', ':Neotree float git_status<CR>')
+keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
+keymap.set("n", "<leader>e", ":Neotree float focus<CR>")
+keymap.set("n", "<leader>o", ":Neotree float git_status<CR>")
 
-
-
-
-
-
-
+-- Outline
+keymap.set("n", "<S-c>", ":BSOpen<CR>")
