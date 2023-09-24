@@ -24,4 +24,5 @@ else
 	require("plugins.autopairs")
 	require("plugins.comment")
 	require("plugins.autotag")
+	require("plugins.bufferline")
 end

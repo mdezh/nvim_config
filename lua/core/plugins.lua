@@ -67,4 +67,5 @@ require("lazy").setup({
 	},
 	{ "terrortylor/nvim-comment" },
 	{ "windwp/nvim-ts-autotag" },
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 })
