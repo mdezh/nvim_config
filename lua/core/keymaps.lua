@@ -119,15 +119,3 @@ keymap.set("i", "<C-v>", '<Esc>"+pi', { noremap = true, silent = true })
 keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 keymap.set({ "i", "v", "x", "t" }, "<C-a>", "<C-\\><C-n>ggVG", { noremap = true, silent = true })
-
-----------------------
--- Plugin Keybinds
-----------------------
-
--- NeoTree
-keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
-keymap.set("n", "<leader>e", ":Neotree float focus<CR>")
-keymap.set("n", "<leader>o", ":Neotree float git_status<CR>")
-
--- Outline
-keymap.set("n", "<S-c>", ":BSOpen<CR>")

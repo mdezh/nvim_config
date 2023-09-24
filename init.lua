@@ -10,6 +10,7 @@ else
 	require("core.colors")
 
 	-- Plugins
+	require("plugins.comment")
 	require("plugins.neo-tree")
 	require("plugins.treesitter")
 	require("plugins.lsp")
@@ -22,7 +23,6 @@ else
 	require("plugins.toggleterm")
 	require("plugins.outline")
 	require("plugins.autopairs")
-	require("plugins.comment")
 	require("plugins.autotag")
 	require("plugins.bufferline")
 	require("plugins.dashboard")

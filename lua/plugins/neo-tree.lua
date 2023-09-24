@@ -19,3 +19,7 @@ vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSi
 vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
 
 require("neo-tree").setup({})
+
+vim.keymap.set("n", "<leader>E", ":Neotree float reveal<CR>")
+vim.keymap.set("n", "<leader>e", ":Neotree float focus<CR>")
+vim.keymap.set("n", "<leader>o", ":Neotree float git_status<CR>")
