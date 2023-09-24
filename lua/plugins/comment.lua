@@ -14,7 +14,7 @@ require("nvim_comment").setup({
 	-- Visual/Operator mapping left hand side
 	-- operator_mapping = "gc",
 	-- operator_mapping = "<leader>c",
-	operator_mapping = "/",
+	operator_mapping = "<leader>/",
 	-- text object mapping, comment chunk,,
 	comment_chunk_text_object = "ic",
 	-- Hook function to call before commenting takes place

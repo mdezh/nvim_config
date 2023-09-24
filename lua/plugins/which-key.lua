@@ -22,7 +22,7 @@ wk.setup({
 	},
 	-- add operators that will trigger motion and text object completion
 	-- to enable all native operators, set the preset / operators plugin above
-	operators = { gc = "Comments" },
+	-- operators = { gc = "Comments" },
 	key_labels = {
 		-- override the label used to display some keys. It doesn't effect WK in any other way.
 		-- For example:
@@ -111,25 +111,72 @@ wk.setup({
 -- }, { prefix = "<leader>" })
 
 wk.register({
+	["/"] = "Toggle Comment",
+	["-"] = "Decrement",
+	["+"] = "Increment",
+	h = "No highlight",
+	o = "Git Git Status",
+	["<C-X>"] = "Close Other Buffers",
+	X = "Pick & Close Buffer",
+	x = "Close Current Buffer",
+	s = "Sort Buffer Tabs",
+	["<C-R>"] = "File Manager (side, reveal)",
+	["<C-E>"] = "File Manager (side)",
+	E = "File Manager (reveal)",
+	e = "File Manager",
+	w = "Save",
+	q = "Quit",
+	Q = "Forced Quit",
+	p = "which_key_ignore",
+	P = "which_key_ignore",
+	y = "which_key_ignore",
+	Y = "which_key_ignore",
 	f = {
 		name = "Find",
-		f = { "Find File" },
-		b = { "Find Buffer" },
-		h = { "Find Help" },
-		w = { "Find Text" },
+		f = "Find File",
+		r = "Find Recent File",
+		b = "Find Buffer",
+		w = "Find Text",
+		h = "Find Help",
+		m = "Find Man Page",
 	},
-	e = { "File Manager" },
-	o = { "Git status" },
-	x = { "Close Buffer" },
-	w = { "Save" },
-	t = { name = "Terminal", f = { "Float terminal" }, h = { "Horizontal terminal" } },
-	h = { "No highlight" },
-	g = { name = "Git", b = "Branches", c = "Commits", s = "Status" },
-	c = { name = "Comment", l = "Comment Line" },
+	v = {
+		name = "Vim",
+		c = "Command History",
+		C = "Commands Available",
+		s = "Search History",
+		m = "Marks",
+		j = "Jump List",
+		l = "Loc List",
+		o = "Options",
+		r = "Registers",
+		q = "Quickfix",
+		Q = "Quickfix History",
+	},
+	t = {
+		name = "Terminal",
+		f = "Float terminal",
+		h = "Horizontal terminal",
+		v = "Verical terminal",
+	},
+	g = {
+		name = "Git",
+		f = "Files",
+		b = "Branches",
+		c = "Commits",
+		s = "Status",
+	},
 	l = {
 		name = "LSP",
-		d = "Diagnostic",
-		D = "Hover diagnostic",
+		R = "References",
+		S = "Document Symbols",
+		w = "Workspace Symbols",
+		W = "Dynamic Workspace Symbols",
+		d = "Diagnostics",
+		t = "Symbols from Treesitter",
+		p = "Planets :)",
+		D = "Hover Diagnostic",
+		["<C-D>"] = "Loclist Diagnostic",
 		f = "Format",
 		r = "Rename",
 		a = "Action",
@@ -140,6 +187,24 @@ wk.register({
 	-- prefix: use "<leader>f" for example for mapping everything related to finding files
 	-- the prefix is prepended to every mapping part of `mappings`
 	prefix = "<leader>",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = false, -- use `nowait` when creating keymaps
+	expr = false, -- use `expr` when creating keymaps
+})
+
+wk.register({
+	r = "Go to References",
+	i = "Go to Implementation",
+	d = "Go to Definitions",
+	D = "Go to Declaration",
+	t = "Go to Type Definitions",
+}, {
+	mode = "n", -- NORMAL mode
+	-- prefix: use "<leader>f" for example for mapping everything related to finding files
+	-- the prefix is prepended to every mapping part of `mappings`
+	prefix = "g",
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
