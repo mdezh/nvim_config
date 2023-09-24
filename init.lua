@@ -17,4 +17,5 @@ else
 	require("plugins.mason")
 	require("plugins.telescope")
 	require("plugins.null_ls")
+	require("plugins.lualine")
 end
