@@ -9,10 +9,12 @@ require("nvim_comment").setup({
 	create_mappings = true,
 	-- Normal mode mapping left hand side
 	-- line_mapping = "gcc",
-	line_mapping = "<leader>cl",
+	-- line_mapping = "<leader>cl",
+	line_mapping = "<leader>/",
 	-- Visual/Operator mapping left hand side
 	-- operator_mapping = "gc",
-	operator_mapping = "<leader>c",
+	-- operator_mapping = "<leader>c",
+	operator_mapping = "/",
 	-- text object mapping, comment chunk,,
 	comment_chunk_text_object = "ic",
 	-- Hook function to call before commenting takes place
