@@ -92,4 +92,5 @@ require("lazy").setup({
 			-- or leave it empty to use the default settings
 		},
 	},
+	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
 })
