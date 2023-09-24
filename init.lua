@@ -21,4 +21,5 @@ else
 	require("plugins.gitsigns")
 	require("plugins.toggleterm")
 	require("plugins.outline")
+	require("plugins.autopairs")
 end
