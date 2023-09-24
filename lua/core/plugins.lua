@@ -57,4 +57,5 @@ require("lazy").setup({
 			require("lsp-progress").setup()
 		end,
 	},
+	{ "lewis6991/gitsigns.nvim" },
 })

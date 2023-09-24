@@ -18,4 +18,5 @@ else
 	require("plugins.telescope")
 	require("plugins.null_ls")
 	require("plugins.lualine")
+	require("plugins.gitsigns")
 end
