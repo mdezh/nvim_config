@@ -26,4 +26,5 @@ else
 	require("plugins.autotag")
 	require("plugins.bufferline")
 	require("plugins.dashboard")
+	require("plugins.which-key")
 end
