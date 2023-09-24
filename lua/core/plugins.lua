@@ -93,4 +93,6 @@ require("lazy").setup({
 		},
 	},
 	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+	{ "hrsh7th/vim-vsnip" },
+	{ "hrsh7th/vim-vsnip-integ" },
 })
