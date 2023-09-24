@@ -22,10 +22,10 @@ keymap.set({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 keymap.set({ "n", "v" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 keymap.set({ "n", "v" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 
--- use jj to exit insert mode
+-- use jk to exit insert mode
 -- keymap.set({ "v", "i" }, "\\'", "<ESC>")
 -- keymap.set({ "v", "i" }, "\\э", "<ESC>")
-keymap.set("i", "jj", "<ESC>")
+keymap.set("i", "jk", "<ESC>")
 
 -- unbind ins toggle
 keymap.set("i", "<Ins>", "<ESC>")
@@ -48,7 +48,7 @@ keymap.set({ "n", "v", "x" }, "<Leader>Y", ':let @*=@"<CR>')
 keymap.set({ "n", "v", "x" }, "<Leader>P", ':let @"=@*<CR>')
 
 -- clear search highlights
-keymap.set("n", "<leader>h", ":nohl<CR>")
+keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -64,10 +64,10 @@ keymap.set("n", "<C-k>", "<C-w>k")
 keymap.set("n", "<C-l>", "<C-w>l")
 
 -- move out of terminal
-keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
-keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
-keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
-keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
+-- keymap.set("t", "<C-j>", "<C-\\><C-n><C-w>j")
+-- keymap.set("t", "<C-k>", "<C-\\><C-n><C-w>k")
+-- keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
+-- keymap.set("t", "<C-l>", "<C-\\><C-n><C-w>l")
 
 -- move line or v-block
 keymap.set("i", "<C-j>", "<Esc><cmd>m .+1<CR>==gi")
@@ -86,16 +86,17 @@ keymap.set("n", "<leader>we", "<C-w>=") -- make split windows equal width & heig
 keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
 
 -- tabs
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+-- keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+-- keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+-- keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
+-- keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- buffers
-keymap.set("n", "<leader>bo", ":new<CR>") -- open new tab
-keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current tab
-keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next tab
-keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous tab
+-- keymap.set("n", "<leader>bo", ":new<CR>") -- open new tab
+-- keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current tab
+-- keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next tab
+-- keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous tab
+keymap.set("n", "<leader>x", ":bdelete<CR>") -- close current tab
 
 -- shift arrow like gui
 keymap.set("n", "<S-Up>", "v<Up>")
@@ -119,3 +120,6 @@ keymap.set("i", "<C-v>", '<Esc>"+pi', { noremap = true, silent = true })
 keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 keymap.set({ "i", "v", "x", "t" }, "<C-a>", "<C-\\><C-n>ggVG", { noremap = true, silent = true })
+
+-- Other
+keymap.set("n", "<leader>w", ":w<CR>")

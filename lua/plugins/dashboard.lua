@@ -21,7 +21,7 @@ require("dashboard").setup({
 		header = default_header(),
 		center = {
 			{
-				icon = " ",
+				icon = "󰙅 ",
 				icon_hl = "Title",
 				desc = "Open tree",
 				desc_hl = "String",
@@ -31,7 +31,7 @@ require("dashboard").setup({
 				action = ":Neotree float",
 			},
 			{
-				icon = " ",
+				icon = "󰈞 ",
 				icon_hl = "Title",
 				desc = "Find files",
 				desc_hl = "String",
@@ -39,6 +39,16 @@ require("dashboard").setup({
 				keymap = "SPC f f",
 				key_hl = "Number",
 				action = ":Telescope find_files",
+			},
+			{
+				icon = "󱋡 ",
+				icon_hl = "Title",
+				desc = "Recent files",
+				desc_hl = "String",
+				key = "r",
+				keymap = "SPC f r",
+				key_hl = "Number",
+				action = ":Telescope oldfiles",
 			},
 			{
 				icon = " ",
