@@ -10,7 +10,7 @@ require("nvim_comment").setup({
 	-- Normal mode mapping left hand side
 	-- line_mapping = "gcc",
 	-- line_mapping = "<leader>cl",
-	line_mapping = "<leader>/",
+	line_mapping = "<leader>//",
 	-- Visual/Operator mapping left hand side
 	-- operator_mapping = "gc",
 	-- operator_mapping = "<leader>c",

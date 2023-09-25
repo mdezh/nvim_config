@@ -111,7 +111,7 @@ wk.setup({
 -- }, { prefix = "<leader>" })
 
 wk.register({
-	["/"] = "Toggle Comment",
+	["//"] = "Toggle Comment",
 	["-"] = "Decrement",
 	["+"] = "Increment",
 	h = "No highlight",

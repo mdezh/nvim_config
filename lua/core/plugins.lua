@@ -38,7 +38,7 @@ require("lazy").setup({
 		opts = {},
 	        -- stylua: ignore
 	        keys = {
-	            { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
+	            -- { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
 	            { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
 	            { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
 	            { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
@@ -59,7 +59,10 @@ require("lazy").setup({
 		tag = "0.1.3",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
-	{ "jose-elias-alvarez/null-ls.nvim" },
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		ft = "go",
+	},
 	{
 		"nvim-lualine/lualine.nvim",
 		dependencies = {
