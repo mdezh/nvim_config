@@ -1,53 +1,50 @@
-local opt = vim.opt
-
 -- line number
-opt.relativenumber = true
-opt.number = true
+vim.opt.relativenumber = true
+vim.opt.number = true
 
 -- tabs & indentication
-opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
-opt.shiftwidth = 4 -- 4 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
-opt.autoindent = true -- copy indent from current line when starting new one
+vim.opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
+vim.opt.shiftwidth = 4 -- 4 spaces for indent width
+vim.opt.expandtab = true -- expand tab to spaces
+vim.opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
-opt.wrap = true -- disable line wrapping
-opt.linebreak = true
+vim.opt.wrap = true -- disable line wrapping
+vim.opt.linebreak = true
 
 -- search settings
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+vim.opt.ignorecase = true -- ignore case when searching
+vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- cursor line
-opt.cursorline = true -- highlight the current cursor line
+vim.opt.cursorline = true -- highlight the current cursor line
 
 -- apperance
 
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2 or any other true color terminal)
-opt.termguicolors = true
-opt.background = "dark" -- colorschemes that can be light or dark will be made dark
-opt.signcolumn = "yes" -- show sign column so that text doesn't shift
+vim.opt.termguicolors = true
+vim.opt.background = "dark" -- colorschemes that can be light or dark will be made dark
+vim.opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
-opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+vim.opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- split windows
-opt.splitright = true -- split vertical window to the right
-opt.splitbelow = true -- split horizontal window to the bottom
+vim.opt.splitright = true -- split vertical window to the right
+vim.opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-") -- consider string-string as whole word
+vim.opt.iskeyword:append("-") -- consider string-string as whole word
 
 -- spelling
-opt.spelllang = { "en_us", "ru" } -- Словари рус eng
-opt.spell = true
+vim.opt.spelllang = { "en_us", "ru" } -- Словари рус eng
+vim.opt.spell = true
 
 -- redundancy
-opt.undofile = true -- keep undo history between sessions
-opt.undodir = vim.fn.expand("~/.local/share/nvim/undo/") -- keep undo files out of file dir
-opt.directory = vim.fn.expand("~/.local/share/nvim/swp/") -- keep unsaved changes away from file dir
-opt.backupdir = vim.fn.expand("~/.local/share/nvim/backup/") -- backup also should not go to git
-
+vim.opt.undofile = true -- keep undo history between sessions
+vim.opt.undodir = vim.fn.expand("~/.local/share/nvim/undo/") -- keep undo files out of file dir
+vim.opt.directory = vim.fn.expand("~/.local/share/nvim/swp/") -- keep unsaved changes away from file dir
+vim.opt.backupdir = vim.fn.expand("~/.local/share/nvim/backup/") -- backup also should not go to git

@@ -1,8 +1,8 @@
 if vim.g.vscode then
 	-- in VSCode extension
 
-	-- jj as <Esc> in visual mode (for insert mode use keybindings in vscode)
-	vim.keymap.set("v", "jj", "<ESC>")
+	require("core.options-vscode")
+	require("core.keymaps-vscode")
 else
 	-- in ordinary Neovim
 
