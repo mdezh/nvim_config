@@ -124,6 +124,7 @@ wk.register({
 	-- s = "Sort Buffer Tabs",
 	b = "Select Buffer",
 	c = "Current Buffer Fuzzy",
+	z = "Toggle Terminal",
 	-- ["<C-R>"] = "File Manager (side, reveal)",
 	-- ["<C-E>"] = "File Manager (side)",
 	-- E = "File Manager (reveal)",
@@ -159,9 +160,9 @@ wk.register({
 	},
 	t = {
 		name = "Terminal",
-		f = "Float terminal",
-		h = "Horizontal terminal",
-		v = "Verical terminal",
+		f = "Float Terminal",
+		h = "Horizontal Terminal",
+		v = "Verical Terminal",
 	},
 	g = {
 		name = "Git",
