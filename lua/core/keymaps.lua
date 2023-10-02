@@ -120,6 +120,11 @@ vim.keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 vim.keymap.set({ "i", "v", "x", "t" }, "<C-a>", "<C-\\><C-n>ggVG", { noremap = true, silent = true })
 
 -- Other
-vim.keymap.set("n", "<leader>s", ":w<CR>")
+vim.keymap.set("n", "<leader>s", function()
+			vim.lsp.buf.format({ async = false })
+            vim.cmd "w"
+		end)
+vim.keymap.set("n", "<leader><C-s>", ":w<CR>")
+vim.keymap.set("n", "<leader>S", ":wa<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "<leader>Q", ":q!<CR>")

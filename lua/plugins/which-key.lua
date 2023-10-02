@@ -129,7 +129,9 @@ wk.register({
 	-- ["<C-E>"] = "File Manager (side)",
 	-- E = "File Manager (reveal)",
 	e = "File Manager",
-	s = "Save",
+	s = "Format and Save",
+	S = "Save All",
+	["<C-s>"] = "Save",
 	q = "Quit",
 	Q = "Forced Quit",
 	-- p = "which_key_ignore", -- see keymaps, now commented out
