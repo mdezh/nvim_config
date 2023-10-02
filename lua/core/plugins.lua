@@ -32,6 +32,13 @@ require("lazy").setup({
 	},
 	{ "nvim-treesitter/nvim-treesitter" },
 	{
+		"kdheepak/lazygit.nvim",
+		-- optional for floating window border decoration
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
 		---@type Flash.Config

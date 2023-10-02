@@ -16,6 +16,7 @@ else
 	require("plugins.comment")
 	require("plugins.neo-tree")
 	require("plugins.treesitter")
+	require("plugins.lazygit")
 	require("plugins.lsp")
 	require("plugins.cmp")
 	require("plugins.mason")
