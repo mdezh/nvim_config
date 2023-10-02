@@ -1,4 +1,4 @@
-require("toggleterm").setup({ open_mapping = [[<leader>z]] })
+require("toggleterm").setup({ open_mapping = [[<leader><leader>]] })
 -- require("toggleterm").setup({ open_mapping = [[<c-\>]] })
 
 function _G.set_terminal_keymaps()

@@ -124,7 +124,7 @@ wk.register({
 	-- s = "Sort Buffer Tabs",
 	b = "Select Buffer",
 	c = "Current Buffer Fuzzy",
-	z = "Toggle Terminal",
+	["<leader>"] = "Toggle Terminal",
 	-- ["<C-R>"] = "File Manager (side, reveal)",
 	-- ["<C-E>"] = "File Manager (side)",
 	-- E = "File Manager (reveal)",
