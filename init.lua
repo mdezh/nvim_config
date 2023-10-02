@@ -27,7 +27,7 @@ else
 	require("plugins.outline")
 	require("plugins.autopairs")
 	require("plugins.autotag")
-	require("plugins.bufferline")
+	-- require("plugins.bufferline")
 	require("plugins.dashboard")
 	require("plugins.which-key")
 end

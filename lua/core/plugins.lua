@@ -87,7 +87,7 @@ require("lazy").setup({
 		opts = {}, -- this is equalent to setup({}) function
 	},
 	{ "windwp/nvim-ts-autotag" },
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	-- { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	{
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",

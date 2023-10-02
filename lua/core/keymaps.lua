@@ -38,10 +38,10 @@ vim.keymap.set("i", "<Ins>", "<ESC>")
 -- vim.keymap.set({ "n", "v", "x", "t" }, "<leader>d", '"_d')
 
 -- copy default reg to/from system/mouse clipboard
-vim.keymap.set({ "n", "v", "x" }, "<Leader>y", ':let @+=@"<CR>')
-vim.keymap.set({ "n", "v", "x" }, "<Leader>p", ':let @"=@+<CR>')
-vim.keymap.set({ "n", "v", "x" }, "<Leader>Y", ':let @*=@"<CR>')
-vim.keymap.set({ "n", "v", "x" }, "<Leader>P", ':let @"=@*<CR>')
+-- vim.keymap.set({ "n", "v", "x" }, "<Leader>y", ':let @+=@"<CR>')
+-- vim.keymap.set({ "n", "v", "x" }, "<Leader>p", ':let @"=@+<CR>')
+-- vim.keymap.set({ "n", "v", "x" }, "<Leader>Y", ':let @*=@"<CR>')
+-- vim.keymap.set({ "n", "v", "x" }, "<Leader>P", ':let @"=@*<CR>')
 
 -- clear search highlights
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
@@ -50,8 +50,8 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "x", '"_x')
 
 -- increment/decrement numbers
-vim.keymap.set("n", "<leader>+", "<C-a>") -- increment
-vim.keymap.set("n", "<leader>-", "<C-x>") -- decrement
+-- vim.keymap.set("n", "<leader>+", "<C-a>") -- increment
+-- vim.keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- navigate windows
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -88,11 +88,13 @@ vim.keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
 -- vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 -- buffers
--- vim.keymap.set("n", "<leader>bo", ":new<CR>") -- open new tab
--- vim.keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current tab
--- vim.keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next tab
--- vim.keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous tab
-vim.keymap.set("n", "<leader>x", ":bdelete<CR>") -- close current tab
+-- vim.keymap.set("n", "<leader>bo", ":new<CR>") -- open new buffer
+-- vim.keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current buffer
+-- vim.keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next buffer
+-- vim.keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous buffer
+vim.keymap.set("n", "<leader><Tab>", ":bn<CR>") --  go to next buffer
+vim.keymap.set("n", "<leader><S-Tab>", ":bp<CR>") --  go to previous buffer
+vim.keymap.set("n", "<leader>x", ":bdelete<CR>") -- close current buffer
 
 -- shift arrow like gui
 vim.keymap.set("n", "<S-Up>", "v<Up>")
@@ -118,6 +120,6 @@ vim.keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 vim.keymap.set({ "i", "v", "x", "t" }, "<C-a>", "<C-\\><C-n>ggVG", { noremap = true, silent = true })
 
 -- Other
-vim.keymap.set("n", "<leader>w", ":w<CR>")
+vim.keymap.set("n", "<leader>s", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 vim.keymap.set("n", "<leader>Q", ":q!<CR>")
