@@ -164,6 +164,13 @@ wk.register({
 		h = "Horizontal Terminal",
 		v = "Verical Terminal",
 	},
+	w = {
+		name = "Window",
+		h = "Split Horizontally",
+		v = "Split Vertically",
+		e = "Make Equal",
+		x = "Close Current Window",
+	},
 	g = {
 		name = "Git",
 		f = "Files",
