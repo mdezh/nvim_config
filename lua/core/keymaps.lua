@@ -86,14 +86,18 @@ vim.keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
 -- vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 -- vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 -- vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+vim.keymap.set("n", "<leader>T", ":tabnew<CR>") -- open new tab
+vim.keymap.set("n", "<leader><C-t>", ":tabclose<CR>") -- close current tab
+vim.keymap.set("n", "<leader><Tab>", ":tabn<CR>") --  go to next tab
+vim.keymap.set("n", "<leader><S-Tab>", ":tabp<CR>") --  go to previous tab
 
 -- buffers
 -- vim.keymap.set("n", "<leader>bo", ":new<CR>") -- open new buffer
 -- vim.keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current buffer
 -- vim.keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next buffer
 -- vim.keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous buffer
-vim.keymap.set("n", "<leader><Tab>", ":bn<CR>") --  go to next buffer
-vim.keymap.set("n", "<leader><S-Tab>", ":bp<CR>") --  go to previous buffer
+-- vim.keymap.set("n", "<leader><Tab>", ":bn<CR>") --  go to next buffer
+-- vim.keymap.set("n", "<leader><S-Tab>", ":bp<CR>") --  go to previous buffer
 vim.keymap.set("n", "<leader>x", ":bdelete<CR>") -- close current buffer
 
 -- shift arrow like gui
