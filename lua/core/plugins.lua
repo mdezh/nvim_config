@@ -17,7 +17,11 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 require("lazy").setup({
 	-- themes
 	{ "navarasu/onedark.nvim" },
-	{ "rebelot/kanagawa.nvim" },
+	-- { "rebelot/kanagawa.nvim" },
+	-- { "savq/melange-nvim" },
+	-- { "rktjmp/lush.nvim" },
+	-- { "mcchrish/zenbones.nvim", depencencies = { "rktjmp/lush.nvim" } },
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- other
 	{ "terrortylor/nvim-comment" },
 	{

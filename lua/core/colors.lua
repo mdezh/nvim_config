@@ -1,2 +1,2 @@
-require('plugins.onedark')
-
+-- require("plugins.onedark")
+require("plugins.catppuccin")
