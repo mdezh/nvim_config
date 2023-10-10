@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
 vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 
-vim.keymap.set("n", "<leader>lR", builtin.lsp_references, {})
+vim.keymap.set("n", "<leader>lu", builtin.lsp_references, {})
 vim.keymap.set("n", "<leader>lS", builtin.lsp_document_symbols, {})
 vim.keymap.set("n", "<leader>lw", builtin.lsp_workspace_symbols, {})
 vim.keymap.set("n", "<leader>lW", builtin.lsp_dynamic_workspace_symbols, {})

@@ -44,10 +44,10 @@ lspconfig.rust_analyzer.setup({
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set("n", "<leader>lD", vim.diagnostic.open_float)
+vim.keymap.set("n", "<leader>lh", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-vim.keymap.set("n", "<leader>ld", vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>lD", vim.diagnostic.setloclist)
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer
@@ -73,6 +73,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		--    vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
 		vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts)
 		vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts)
+		vim.keymap.set({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, opts)
 		--    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
 		vim.keymap.set("n", "<leader>lf", function()
 			vim.lsp.buf.format({ async = true })
