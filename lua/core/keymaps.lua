@@ -18,10 +18,10 @@ vim.keymap.set({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 vim.keymap.set({ "n", "v" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 vim.keymap.set({ "n", "v" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 
--- use jj to exit insert or visual mode
+-- use jk to exit insert or visual mode
 -- vim.keymap.set({ "v", "i" }, "\\'", "<ESC>")
 -- vim.keymap.set({ "v", "i" }, "\\э", "<ESC>")
-vim.keymap.set({ "v", "i" }, "jj", "<ESC>")
+vim.keymap.set({ "v", "i" }, "jk", "<ESC>")
 
 -- unbind ins toggle
 vim.keymap.set("i", "<Ins>", "<ESC>")

@@ -18,8 +18,8 @@ vim.keymap.set({ "n", "v" }, "k", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 vim.keymap.set({ "n", "v" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", expr_opts)
 vim.keymap.set({ "n", "v" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 
--- jj as <Esc> in visual mode (for insert mode use keybindings in vscode)
-vim.keymap.set("v", "jj", "<ESC>")
+-- jk as <Esc> in visual mode (for insert mode use keybindings in vscode)
+vim.keymap.set("v", "jk", "<ESC>")
 
 -- unbind ins toggle
 vim.keymap.set("i", "<Ins>", "<ESC>")
