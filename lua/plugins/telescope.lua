@@ -1,6 +1,5 @@
 local builtin = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>b", builtin.buffers, {})
 vim.keymap.set("n", "<leader>c", builtin.current_buffer_fuzzy_find, {})
 vim.keymap.set("n", "<leader>r", builtin.oldfiles, {})
 

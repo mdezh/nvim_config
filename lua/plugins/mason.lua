@@ -8,7 +8,7 @@ require("mason").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>M", ":Mason<CR>")
+vim.keymap.set("n", "<leader>pm", ":Mason<CR>")
 
 ---@class MasonSettings
 local DEFAULT_SETTINGS = {

@@ -123,5 +123,3 @@ require("lazy").setup({
 	{ "hrsh7th/vim-vsnip-integ" },
 	{ "sudoerwx/vim-ray-so-beautiful" },
 })
-
-vim.keymap.set("n", "<leader>L", ":Lazy<CR>")

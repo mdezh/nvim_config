@@ -130,5 +130,7 @@ vim.keymap.set("n", "<leader>S", ":wa<CR>")
 vim.keymap.set("n", "<leader>q", ":qa<CR>")
 vim.keymap.set("n", "<leader>Q", ":qa!<CR>")
 
+vim.keymap.set("n", "<leader>pl", ":Lazy<CR>")
+
 vim.keymap.set("v", "<F5>", ":Ray<CR>")
 vim.keymap.set("n", "<F5>", "mmggVG:Ray<CR>`m")
