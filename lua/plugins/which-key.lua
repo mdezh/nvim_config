@@ -141,6 +141,7 @@ wk.register({
 		f = "Find File",
 		r = "Find Recent File",
 		b = "Find Buffer",
+		c = "Current Buffer Fuzzy",
 		w = "Find Text",
 		h = "Find Help",
 		m = "Find Man Page",
