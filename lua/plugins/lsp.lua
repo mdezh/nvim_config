@@ -15,7 +15,8 @@ lspconfig.gopls.setup({
 			usePlaceholders = true,
 			analyses = {
 				unusedparams = true,
-				shadow = true,
+				-- shadow = true,
+				shadow = false,
 			},
 			staticcheck = true,
 			gofumpt = true,
