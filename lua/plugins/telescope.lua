@@ -2,6 +2,7 @@ local builtin = require("telescope.builtin")
 
 vim.keymap.set("n", "<leader>c", builtin.current_buffer_fuzzy_find, {})
 vim.keymap.set("n", "<leader>r", builtin.oldfiles, {})
+vim.keymap.set("n", "<leader>b", builtin.buffers, {})
 
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})
@@ -40,4 +41,4 @@ vim.keymap.set("n", "gr", builtin.lsp_references, { noremap = true, silent = tru
 vim.keymap.set("n", "gd", builtin.lsp_definitions, { noremap = true, silent = true })
 vim.keymap.set("n", "gt", builtin.lsp_type_definitions, { noremap = true, silent = true })
 
-vim.keymap.set("n", "*", builtin.grep_string, {})
+vim.keymap.set("n", "<leader>*", builtin.grep_string, {})
