@@ -65,6 +65,13 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-cmdline" },
 	{ "hrsh7th/nvim-cmp" },
 	----------------------------
+	{
+		"yanskun/gotests.nvim",
+		ft = "go",
+		config = function()
+			require("gotests").setup()
+		end,
+	},
 	{ "williamboman/mason.nvim" },
 	{
 		"nvim-telescope/telescope.nvim",
