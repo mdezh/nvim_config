@@ -20,6 +20,7 @@ else
 	require("plugins.lsp")
 	require("plugins.cmp")
 	require("plugins.mason")
+	-- require("plugins.beacon")  -- commented as use defaults
 	require("plugins.telescope")
 	require("plugins.null_ls")
 	require("plugins.lualine")

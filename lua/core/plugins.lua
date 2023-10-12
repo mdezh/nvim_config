@@ -72,6 +72,7 @@ require("lazy").setup({
 			require("gotests").setup()
 		end,
 	},
+	{ "rainbowhxch/beacon.nvim" },
 	{ "williamboman/mason.nvim" },
 	{
 		"nvim-telescope/telescope.nvim",
