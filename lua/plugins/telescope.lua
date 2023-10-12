@@ -34,7 +34,7 @@ vim.keymap.set("n", "<leader>lS", builtin.lsp_document_symbols, {})
 vim.keymap.set("n", "<leader>lw", builtin.lsp_workspace_symbols, {})
 vim.keymap.set("n", "<leader>lW", builtin.lsp_dynamic_workspace_symbols, {})
 vim.keymap.set("n", "<leader>ld", builtin.diagnostics, {})
-vim.keymap.set("n", "<leader>lt", builtin.treesitter, {})
+vim.keymap.set("n", "<leader>l<C-s>", builtin.treesitter, {})
 vim.keymap.set("n", "<leader>lp", builtin.planets, {})
 
 vim.keymap.set("n", "gr", builtin.lsp_references, { noremap = true, silent = true })

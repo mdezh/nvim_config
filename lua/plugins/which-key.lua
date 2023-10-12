@@ -221,7 +221,7 @@ wk.register({
 		w = "Workspace Symbols",
 		W = "Dynamic Workspace Symbols",
 		d = "Diagnostics",
-		t = "Symbols from Treesitter",
+		["<C-s"] = "Symbols from Treesitter",
 		p = "Planets :)",
 		h = "Hover Diagnostic",
 		D = "Loclist Diagnostic",
@@ -232,6 +232,11 @@ wk.register({
 		s = "Symbol",
 		["]"] = "Next Diagnoctic",
 		["["] = "Prev Diagnoctic",
+		t = {
+			name = "Tests",
+			g = "Generate for line/selection",
+			G = "Generate for buffer",
+		},
 	},
 }, {
 	mode = "n", -- NORMAL mode
