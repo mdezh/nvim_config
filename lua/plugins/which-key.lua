@@ -230,6 +230,8 @@ wk.register({
 		r = "Rename",
 		a = "Action",
 		s = "Symbol",
+		["]"] = "Next Diagnoctic",
+		["["] = "Prev Diagnoctic",
 	},
 }, {
 	mode = "n", -- NORMAL mode
