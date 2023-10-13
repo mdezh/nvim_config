@@ -196,13 +196,6 @@ wk.register({
 		["<Tab>"] = "Next Tab",
 		["<S-Tab>"] = "Prev Tab",
 	},
-	w = {
-		name = "Window",
-		h = "Split Horizontally",
-		v = "Split Vertically",
-		e = "Make Equal",
-		x = "Close Current Window",
-	},
 	g = {
 		name = "Git",
 		g = "Lazy Git",
@@ -234,11 +227,8 @@ wk.register({
 		s = "Symbol",
 		["]"] = "Next Diagnoctic",
 		["["] = "Prev Diagnoctic",
-		t = {
-			name = "Tests",
-			g = "Generate for line/selection",
-			G = "Generate for buffer",
-		},
+		t = "Generate Tests for line/selection",
+		T = "Generate Tests for buffer",
 	},
 }, {
 	mode = "n", -- NORMAL mode
