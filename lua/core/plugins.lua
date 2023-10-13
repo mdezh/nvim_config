@@ -20,7 +20,7 @@ require("lazy").setup({
 	{ "rebelot/kanagawa.nvim" },
 	-- { "savq/melange-nvim" },
 	-- { "rktjmp/lush.nvim" },
-	-- { "mcchrish/zenbones.nvim", depencencies = { "rktjmp/lush.nvim" } },
+	{ "mcchrish/zenbones.nvim", depencencies = { "rktjmp/lush.nvim" } },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- other
 	{ "terrortylor/nvim-comment" }, -- CommentToggle
@@ -137,4 +137,24 @@ require("lazy").setup({
 	{ "hrsh7th/vim-vsnip" }, -- VSCode(LSP)'s snippet feature in vim/nvim
 	{ "hrsh7th/vim-vsnip-integ" }, -- vim-vsnip integrations to other plugins
 	{ "sudoerwx/vim-ray-so-beautiful" }, -- make pictures with code
+{
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/notes",
+              },
+            },
+          },
+        },
+      }
+    end,
+  },
 })
