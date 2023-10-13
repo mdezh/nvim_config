@@ -76,10 +76,11 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 
 -- window management
-vim.keymap.set("n", "<leader>wv", "<C-w>v") -- split window vertically
-vim.keymap.set("n", "<leader>wh", "<C-w>s") -- split window horizontally
-vim.keymap.set("n", "<leader>we", "<C-w>=") -- make split windows equal width & height
-vim.keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
+-- vim.keymap.set("n", "<leader>wv", "<C-w>v") -- split window vertically
+-- vim.keymap.set("n", "<leader>wh", "<C-w>s") -- split window horizontally
+-- vim.keymap.set("n", "<leader>we", "<C-w>=") -- make split windows equal width & height
+-- vim.keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
+vim.keymap.set("n", "<leader>X", ":close<CR>") -- close current split window
 
 -- tabs
 -- vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
@@ -96,8 +97,6 @@ vim.keymap.set("n", "<leader>T<S-Tab>", ":tabp<CR>") --  go to previous tab
 -- vim.keymap.set("n", "<leader>bd", ":bdelete<CR>") -- close current buffer
 -- vim.keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next buffer
 -- vim.keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous buffer
--- vim.keymap.set("n", "<leader><Tab>", ":bn<CR>") --  go to next buffer
--- vim.keymap.set("n", "<leader><S-Tab>", ":bp<CR>") --  go to previous buffer
 vim.keymap.set("n", "<leader>x", ":bdelete<CR>") -- close current buffer
 
 -- shift arrow like gui
