@@ -216,7 +216,7 @@ wk.register({
 		w = "Workspace Symbols",
 		W = "Dynamic Workspace Symbols",
 		d = "Diagnostics",
-		["<C-s"] = "Symbols from Treesitter",
+		["<C-s>"] = "Symbols from Treesitter",
 		p = "Planets :)",
 		h = "Hover Diagnostic",
 		D = "Loclist Diagnostic",
