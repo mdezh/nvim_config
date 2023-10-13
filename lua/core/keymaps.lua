@@ -1,7 +1,7 @@
 -- set leader key to space
 vim.g.mapleader = " "
 
--- Русский язык
+-- Русский язык (переключение по Ctrl-^ в режиме вставки)
 
 vim.cmd("set keymap=russian-jcukenwin")
 vim.cmd("set iminsert=0")
