@@ -82,10 +82,10 @@ require("lazy").setup({
 		tag = "0.1.3",
 		dependencies = { "nvim-lua/plenary.nvim" }, -- lua helpers
 	},
-	-- {
-	-- 	"jose-elias-alvarez/null-ls.nvim", -- use Neovim as a language server to inject LSP diagnostics, code actions, etc.
-	-- 	ft = "go",
-	-- },
+	{
+		"jose-elias-alvarez/null-ls.nvim", -- use Neovim as a language server to inject LSP diagnostics, code actions, etc.
+		-- ft = "go",
+	},
 	{
 		"nvim-lualine/lualine.nvim", -- statusline
 		dependencies = {
@@ -137,24 +137,24 @@ require("lazy").setup({
 	{ "hrsh7th/vim-vsnip" }, -- VSCode(LSP)'s snippet feature in vim/nvim
 	{ "hrsh7th/vim-vsnip-integ" }, -- vim-vsnip integrations to other plugins
 	{ "sudoerwx/vim-ray-so-beautiful" }, -- make pictures with code
-{
-    "nvim-neorg/neorg",
-    build = ":Neorg sync-parsers",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require("neorg").setup {
-        load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
-          ["core.concealer"] = {}, -- Adds pretty icons to your documents
-          ["core.dirman"] = { -- Manages Neorg workspaces
-            config = {
-              workspaces = {
-                notes = "~/notes",
-              },
-            },
-          },
-        },
-      }
-    end,
-  },
+	{
+		"nvim-neorg/neorg",
+		build = ":Neorg sync-parsers",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("neorg").setup({
+				load = {
+					["core.defaults"] = {}, -- Loads default behaviour
+					["core.concealer"] = {}, -- Adds pretty icons to your documents
+					["core.dirman"] = { -- Manages Neorg workspaces
+						config = {
+							workspaces = {
+								notes = "~/notes",
+							},
+						},
+					},
+				},
+			})
+		end,
+	},
 })

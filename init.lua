@@ -22,7 +22,7 @@ else
 	require("plugins.mason")
 	-- require("plugins.beacon")  -- commented as use defaults
 	require("plugins.telescope")
-	-- require("plugins.null_ls") -- commented as we try to work without it
+	require("plugins.null_ls")
 	require("plugins.lualine")
 	require("plugins.gitsigns")
 	require("plugins.toggleterm")
