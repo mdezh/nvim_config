@@ -1,10 +1,9 @@
 local cmp = require("cmp")
 
 cmp.setup({
-	completion = {
-		autocomplete = false,
-		-- autocomplete = true,
-	},
+	-- completion = {
+	-- 	autocomplete = false,
+	-- },
 	snippet = {
 		-- REQUIRED - you must specify a snippet engine
 		expand = function(args)
@@ -54,16 +53,22 @@ cmp.setup({
 		-- 	end
 		-- end, { "i", "s" }),
 	}),
-	sources = cmp.config.sources({
+	-- sources = cmp.config.sources({
+	-- 	{ name = "nvim_lsp" },
+	-- 	{ name = "vsnip" }, -- For vsnip users.
+	-- 	{ name = 'luasnip' }, -- For luasnip users.
+	-- 	{ name = 'ultisnips' }, -- For ultisnips users.
+	-- 	{ name = 'snippy' }, -- For snippy users.
+	-- }, {
+	-- 	{ name = "buffer" },
+	-- 	{ name = "nvim_lsp_signature_help" },
+	-- }),
+	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "vsnip" }, -- For vsnip users.
-		-- { name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
-	}, {
 		{ name = "buffer" },
 		{ name = "nvim_lsp_signature_help" },
-	}),
+	},
 })
 
 -- Set configuration for specific filetype.

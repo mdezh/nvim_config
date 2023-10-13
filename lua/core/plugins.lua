@@ -23,9 +23,9 @@ require("lazy").setup({
 	-- { "mcchrish/zenbones.nvim", depencencies = { "rktjmp/lush.nvim" } },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- other
-	{ "terrortylor/nvim-comment" },
+	{ "terrortylor/nvim-comment" }, -- CommentToggle
 	{
-		"nvim-neo-tree/neo-tree.nvim",
+		"nvim-neo-tree/neo-tree.nvim", -- manage file system and other tree like structures
 		branch = "v3.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -34,9 +34,12 @@ require("lazy").setup({
 			"s1n7ax/nvim-window-picker",
 		},
 	},
-	{ "nvim-treesitter/nvim-treesitter" },
 	{
-		"kdheepak/lazygit.nvim",
+		"nvim-treesitter/nvim-treesitter", -- syntax highlighting, parsing
+		build = ":TSUpdate",
+	},
+	{
+		"kdheepak/lazygit.nvim", -- LazyGit inside nvim
 		-- optional for floating window border decoration
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
@@ -44,10 +47,10 @@ require("lazy").setup({
 		},
 	},
 	{
-		"folke/flash.nvim",
+		"folke/flash.nvim", -- code search and navigation
 		event = "VeryLazy",
 		---@type Flash.Config
-		opts = {},
+		opts = { modes = { char = { jump_labels = true } } },
 	        -- stylua: ignore
 	        keys = {
 	            -- { "s", mode = { "n", "o", "x" }, function() require("flash").jump() end, desc = "Flash" },
@@ -66,60 +69,60 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	----------------------------
 	{
-		"yanskun/gotests.nvim",
+		"yanskun/gotests.nvim", -- auto generate boilerplate for Go tests
 		ft = "go",
 		config = function()
 			require("gotests").setup()
 		end,
 	},
-	{ "rainbowhxch/beacon.nvim" },
-	{ "williamboman/mason.nvim" },
+	{ "rainbowhxch/beacon.nvim" }, -- show cursor position after jump, etc.
+	{ "williamboman/mason.nvim" }, -- install and manage LSP servers, linters, formatters, etc.
 	{
-		"nvim-telescope/telescope.nvim",
+		"nvim-telescope/telescope.nvim", -- fuzzy finder over lists
 		tag = "0.1.3",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = { "nvim-lua/plenary.nvim" }, -- lua helpers
 	},
+	-- {
+	-- 	"jose-elias-alvarez/null-ls.nvim", -- use Neovim as a language server to inject LSP diagnostics, code actions, etc.
+	-- 	ft = "go",
+	-- },
 	{
-		"jose-elias-alvarez/null-ls.nvim",
-		ft = "go",
-	},
-	{
-		"nvim-lualine/lualine.nvim",
+		"nvim-lualine/lualine.nvim", -- statusline
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			"linrongbin16/lsp-progress.nvim",
 		},
 	},
 	{
-		"linrongbin16/lsp-progress.nvim",
+		"linrongbin16/lsp-progress.nvim", -- LSP progress status
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lsp-progress").setup()
 		end,
 	},
-	{ "lewis6991/gitsigns.nvim" },
-	{ "f-person/git-blame.nvim" },
-	{ "akinsho/toggleterm.nvim", version = "*", config = true },
-	{ "Djancyp/outline" },
+	{ "lewis6991/gitsigns.nvim" }, -- git decorations
+	-- { "f-person/git-blame.nvim" }, -- git blame line, now use from gitsigns
+	{ "akinsho/toggleterm.nvim", version = "*", config = true }, -- toggle (multiple) terminal window inside Neovim
+	{ "Djancyp/outline" }, -- ls for buffers: jump, delete, etc... now via <S-c>
 	{
-		"windwp/nvim-autopairs",
+		"windwp/nvim-autopairs", -- auto insert pairs for brackets, etc.
 		event = "InsertEnter",
 		opts = {}, -- this is equalent to setup({}) function
 	},
-	{ "windwp/nvim-ts-autotag" },
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "windwp/nvim-ts-autotag" }, -- use treesitter to autoclose and autorename html tags
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" }, -- upper line with "tabs" for buffers
 	{
-		"glepnir/dashboard-nvim",
+		"glepnir/dashboard-nvim", -- dashboard on start
 		event = "VimEnter",
-		config = function()
-			require("dashboard").setup({
-				-- config
-			})
-		end,
+		-- config = function()
+		-- 	require("dashboard").setup({
+		-- 		-- config
+		-- 	})
+		-- end,
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	{
-		"folke/which-key.nvim",
+		"folke/which-key.nvim", -- hints for keybindings
 		event = "VeryLazy",
 		init = function()
 			vim.o.timeout = true
@@ -130,8 +133,8 @@ require("lazy").setup({
 			-- or leave it empty to use the default settings
 		},
 	},
-	{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-	{ "hrsh7th/vim-vsnip" },
-	{ "hrsh7th/vim-vsnip-integ" },
-	{ "sudoerwx/vim-ray-so-beautiful" },
+	{ "hrsh7th/cmp-nvim-lsp-signature-help" }, -- nvim-cmp source for displaying function signatures with the current parameter emphasized
+	{ "hrsh7th/vim-vsnip" }, -- VSCode(LSP)'s snippet feature in vim/nvim
+	{ "hrsh7th/vim-vsnip-integ" }, -- vim-vsnip integrations to other plugins
+	{ "sudoerwx/vim-ray-so-beautiful" }, -- make pictures with code
 })
