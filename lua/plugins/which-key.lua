@@ -175,6 +175,7 @@ wk.register({
 		r = "Registers",
 		q = "Quickfix",
 		Q = "Quickfix History",
+		S = "Color Scheme",
 	},
 	p = {
 		name = "Plugins",
