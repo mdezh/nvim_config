@@ -134,5 +134,5 @@ vim.keymap.set("n", "<leader>pl", ":Lazy<CR>")
 vim.keymap.set("v", "<F5>", ":Ray<CR>")
 vim.keymap.set("n", "<F5>", "mmggVG:Ray<CR>`m")
 
-vim.keymap.set({ "n", "v" }, "<leader>ltg", ":GoTests<CR>")
-vim.keymap.set({ "n", "v" }, "<leader>ltG", ":GoTestsAll<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>lt", ":GoTests<CR>")
+vim.keymap.set({ "n", "v" }, "<leader>lT", ":GoTestsAll<CR>")
