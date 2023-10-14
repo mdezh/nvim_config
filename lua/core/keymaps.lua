@@ -21,7 +21,7 @@ vim.keymap.set({ "n", "v" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", expr_opts)
 -- use jk to exit insert or visual mode
 -- vim.keymap.set({ "v", "i" }, "\\'", "<ESC>")
 -- vim.keymap.set({ "v", "i" }, "\\э", "<ESC>")
-vim.keymap.set({ "v", "i" }, "jk", "<ESC>")
+vim.keymap.set({ "v", "i" }, "jk", "<ESC>", { desc = "Exit insert/visual mode with jk" })
 
 -- unbind ins toggle
 vim.keymap.set("i", "<Ins>", "<ESC>")
@@ -44,14 +44,14 @@ vim.keymap.set("i", "<Ins>", "<ESC>")
 -- vim.keymap.set({ "n", "v", "x" }, "<Leader>P", ':let @"=@*<CR>')
 
 -- clear search highlights
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
 vim.keymap.set("n", "x", '"_x')
 
 -- increment/decrement numbers
--- vim.keymap.set("n", "<leader>+", "<C-a>") -- increment
--- vim.keymap.set("n", "<leader>-", "<C-x>") -- decrement
+-- vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
+-- vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- navigate windows
 vim.keymap.set("n", "<C-j>", "<C-w>j")
@@ -76,21 +76,23 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 
 -- window management
--- vim.keymap.set("n", "<leader>wv", "<C-w>v") -- split window vertically
--- vim.keymap.set("n", "<leader>wh", "<C-w>s") -- split window horizontally
--- vim.keymap.set("n", "<leader>we", "<C-w>=") -- make split windows equal width & height
--- vim.keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
-vim.keymap.set("n", "<leader>X", ":close<CR>") -- close current split window
+-- vim.keymap.set("n", "<leader>wv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
+-- vim.keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
+-- vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
+-- vim.keymap.set("n", "<leader>wx", ":close<CR>", { desc = "Close current split" }) -- close current split window
+vim.keymap.set("n", "<leader>X", ":close<CR>", { desc = "Close current split" }) -- close current split window
 
 -- tabs
--- vim.keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
--- vim.keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
--- vim.keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
--- vim.keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-vim.keymap.set("n", "<leader>Tt", ":tabnew<CR>") -- open new tab
-vim.keymap.set("n", "<leader>Tx", ":tabclose<CR>") -- close current tab
-vim.keymap.set("n", "<leader>T<Tab>", ":tabn<CR>") --  go to next tab
-vim.keymap.set("n", "<leader>T<S-Tab>", ":tabp<CR>") --  go to previous tab
+-- vim.keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+-- vim.keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+-- vim.keymap.set("n", "<leader>tn", ":tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
+-- vim.keymap.set("n", "<leader>tp", ":tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+-- vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+vim.keymap.set("n", "<leader>Tt", ":tabnew<CR>", { desc = "Open new tab" }) -- open new tab
+vim.keymap.set("n", "<leader>Tx", ":tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+vim.keymap.set("n", "<leader>T<Tab>", ":tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
+vim.keymap.set("n", "<leader>T<S-Tab>", ":tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
+vim.keymap.set("n", "<leader>Tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- buffers
 -- vim.keymap.set("n", "<leader>bo", ":new<CR>") -- open new buffer

@@ -9,7 +9,7 @@ vim.opt.expandtab = true -- expand tab to spaces
 vim.opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
-vim.opt.wrap = true -- disable line wrapping
+vim.opt.wrap = true -- enable line wrapping
 vim.opt.linebreak = true
 
 -- search settings
@@ -42,6 +42,9 @@ vim.opt.iskeyword:append("-") -- consider string-string as whole word
 -- spelling
 vim.opt.spelllang = { "en_us", "ru" } -- Словари рус eng
 vim.opt.spell = true
+
+-- turn off swapfile
+-- opt.swapfile = false
 
 -- redundancy
 vim.opt.undofile = true -- keep undo history between sessions
