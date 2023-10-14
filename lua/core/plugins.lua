@@ -19,7 +19,7 @@ require("lazy").setup({
 	{ "navarasu/onedark.nvim" },
 	{ "rebelot/kanagawa.nvim" },
 	-- { "savq/melange-nvim" },
-	-- { "rktjmp/lush.nvim" },
+	{ "rktjmp/lush.nvim" },
 	{ "mcchrish/zenbones.nvim", depencencies = { "rktjmp/lush.nvim" } },
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- other
