@@ -1,4 +1,4 @@
---
+--key
 vim.g.mapleader = " "
 
 -- Русский язык (переключение по Ctrl-^ в режиме вставки)
@@ -70,6 +70,8 @@ vim.keymap.set("i", "<C-j>", "<Esc><cmd>m .+1<CR>==gi")
 vim.keymap.set("i", "<C-k>", "<Esc><cmd>m .-2<CR>==gi")
 vim.keymap.set("x", "J", ":m '>+1<CR>gv-gv", { noremap = true, silent = true })
 vim.keymap.set("x", "K", ":m '<-2<CR>gv-gv", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-Down>", "<Esc><cmd>m .+1<CR>")
+vim.keymap.set("n", "<C-Up>", "<Esc><cmd>m .-2<CR>")
 
 -- stay in indent mode
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
