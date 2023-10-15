@@ -30,7 +30,7 @@ return {
 			keymap.set({ "n", "v" }, "<leader>a", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 			keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
-			opts.desc = "Smart rename"
+			opts.desc = "Rename"
 			keymap.set("n", "<leader>lr", vim.lsp.buf.rename, opts) -- smart rename
 
 			opts.desc = "Show line diagnostics"
