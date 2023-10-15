@@ -56,15 +56,15 @@ return {
 		vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Git commits" })
 		vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Git status" })
 
-		vim.keymap.set("n", "<leader>lu", builtin.lsp_references, { desc = "References" })
+		vim.keymap.set("n", "<leader>lR", builtin.lsp_references, { desc = "References" })
 		vim.keymap.set("n", "<leader>ls", builtin.lsp_document_symbols, { desc = "Document symbols" })
 		vim.keymap.set("n", "<leader>lw", builtin.lsp_workspace_symbols, { desc = "Workspace symbols" })
 		vim.keymap.set("n", "<leader>lW", builtin.lsp_dynamic_workspace_symbols, { desc = "Dynamic workspace symbols" })
+		vim.keymap.set("n", "<leader>lS", builtin.treesitter, { desc = "Treesitter symbols" })
+		vim.keymap.set("n", "<leader>lp", builtin.planets, { desc = "Planets" })
 		vim.keymap.set("n", "<leader>ld", function()
 			builtin.diagnostics({ bufnr = 0 })
 		end, { desc = "Diagnostics" })
-		vim.keymap.set("n", "<leader>lS", builtin.treesitter, { desc = "Treesitter symbols" })
-		vim.keymap.set("n", "<leader>lp", builtin.planets, { desc = "Planets" })
 
 		vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "LSP References" })
 		vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "LSP Definitions" })
