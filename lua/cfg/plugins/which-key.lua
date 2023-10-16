@@ -99,15 +99,12 @@ return {
 	config = function()
 		local wk = require("which-key")
 		wk.register({
-			L = {
-				name = "Buffer Line",
-				s = "Sort...",
-			},
+			L = { name = "Buffer Line", s = "Sort..." },
 			t = "Terminal",
 			f = "Find...",
 			v = "Vim",
 			g = "Git",
-			l = "LSP",
+			l = { name = "LSP", t = "Tests" },
 			p = "Plugins",
 			T = "Tabs",
 			w = "Session",
