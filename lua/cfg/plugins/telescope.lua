@@ -30,9 +30,12 @@ return {
 		vim.keymap.set("n", "<leader>c", builtin.current_buffer_fuzzy_find, { desc = "Find in buffer" })
 		vim.keymap.set("n", "<leader>r", builtin.oldfiles, { desc = "Find recent files" })
 		vim.keymap.set("n", "<leader>b", builtin.buffers, { desc = "Find buffer" })
+		vim.keymap.set("n", "<leader>d", builtin.git_status, { desc = "Diff via Telescope" })
+		vim.keymap.set("n", "<leader>*", builtin.grep_string, { desc = "Find string under cursor in cwd" })
 
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files in cwd" })
 		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "Find recent files" })
+		vim.keymap.set("n", "<leader>fg", builtin.git_files, { desc = "Git files" })
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find buffer" })
 		vim.keymap.set("n", "<leader>fc", builtin.current_buffer_fuzzy_find, { desc = "Find in buffer" })
 		vim.keymap.set("n", "<leader>fw", builtin.live_grep, { desc = "Find string in cwd" })
@@ -70,7 +73,5 @@ return {
 		vim.keymap.set("n", "gd", builtin.lsp_definitions, { desc = "LSP Definitions" })
 		vim.keymap.set("n", "gt", builtin.lsp_type_definitions, { desc = "LSP Type definitions" })
 		vim.keymap.set("n", "gi", builtin.lsp_implementations, { desc = "LSP Implementations" })
-
-		vim.keymap.set("n", "<leader>*", builtin.grep_string, { desc = "Find string under cursor in cwd" })
 	end,
 }

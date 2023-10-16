@@ -28,21 +28,21 @@ return {
 
 		vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
 		vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
-		vim.keymap.set("n", "<leader>B", ":BufferLinePick<CR>", { desc = "Pick buffer" })
+		vim.keymap.set("n", "<leader><C-b>", ":BufferLinePick<CR>", { desc = "Pick buffer" })
 
-		vim.keymap.set("n", "<leader>^x", ":BufferLinePickClose<CR>", { desc = "Pick and close buffer" })
-		vim.keymap.set("n", "<leader>^X", ":bdelete<CR>", { desc = "Close buffer" })
-		vim.keymap.set("n", "<leader>^o", ":BufferLineCloseOthers<CR>", { desc = "Close other buffers" })
-		vim.keymap.set("n", "<leader>^p", ":BufferLineTogglePin<CR>", { desc = "Pin/unpin buffer" })
-		vim.keymap.set("n", "<leader>^g", ":BufferLinePick<CR>", { desc = "Pick buffer" })
-		vim.keymap.set("n", "<leader>^l", ":BufferLineCloseLeft<CR>", { desc = "Close left buffer" })
-		vim.keymap.set("n", "<leader>^r", ":BufferLineCloseRight<CR>", { desc = "Close right buffer" })
-		vim.keymap.set("n", "<leader>^st", ":BufferLineSortByTabs<CR>", { desc = "Sort by tabs" })
-		vim.keymap.set("n", "<leader>^se", ":BufferLineSortByExtension<CR>", { desc = "Sort by extension" })
-		vim.keymap.set("n", "<leader>^sd", ":BufferLineSortByDirectory<CR>", { desc = "Sort by directory" })
+		vim.keymap.set("n", "<leader>Lx", ":BufferLinePickClose<CR>", { desc = "Pick and close buffer" })
+		vim.keymap.set("n", "<leader>LX", ":bdelete<CR>", { desc = "Close buffer" })
+		vim.keymap.set("n", "<leader>Lo", ":BufferLineCloseOthers<CR>", { desc = "Close other buffers" })
+		vim.keymap.set("n", "<leader>Lp", ":BufferLineTogglePin<CR>", { desc = "Pin/unpin buffer" })
+		vim.keymap.set("n", "<leader>Lb", ":BufferLinePick<CR>", { desc = "Pick buffer" })
+		vim.keymap.set("n", "<leader>Ll", ":BufferLineCloseLeft<CR>", { desc = "Close left buffer" })
+		vim.keymap.set("n", "<leader>Lr", ":BufferLineCloseRight<CR>", { desc = "Close right buffer" })
+		vim.keymap.set("n", "<leader>Lst", ":BufferLineSortByTabs<CR>", { desc = "Sort by tabs" })
+		vim.keymap.set("n", "<leader>Lse", ":BufferLineSortByExtension<CR>", { desc = "Sort by extension" })
+		vim.keymap.set("n", "<leader>Lsd", ":BufferLineSortByDirectory<CR>", { desc = "Sort by directory" })
 		vim.keymap.set(
 			"n",
-			"<leader>^sr",
+			"<leader>Lsr",
 			":BufferLineSortByRelativeDirectory<CR>",
 			{ desc = "Sort by relative directory" }
 		)

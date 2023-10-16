@@ -35,9 +35,12 @@ return {
 		vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
 		vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵 ", texthl = "DiagnosticSignHint" })
 
-		vim.keymap.set("n", "<leader>e", ":Neotree float focus<CR>", { desc = "NeoTree float" })
-		vim.keymap.set("n", "<leader>gn", ":Neotree float git_status<CR>", { desc = "NeoTree Git" })
-		vim.keymap.set("n", "<leader>E", ":Neotree toggle<CR>", { desc = "NeoTree toggle" })
+		vim.keymap.set("n", "<leader>B", ":Neotree float buffers<CR>", { desc = "Buffers via NeoTree" })
+		vim.keymap.set("n", "<leader>e", ":Neotree float focus<CR>", { desc = "Explporer" })
+		vim.keymap.set("n", "<leader>E", ":Neotree left focus<CR>", { desc = "Explorer on the left" })
+		vim.keymap.set("n", "<leader><C-e>", ":Neotree left close<CR>", { desc = "Close explorer on the left" })
+		vim.keymap.set("n", "<leader>D", ":Neotree float git_status<CR>", { desc = "Diff via NeoTree" })
+		vim.keymap.set("n", "<leader>gn", ":Neotree float git_status<CR>", { desc = "NeoTree Git status" })
 
 		require("neo-tree").setup({})
 

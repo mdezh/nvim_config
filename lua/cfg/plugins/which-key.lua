@@ -99,7 +99,7 @@ return {
 	config = function()
 		local wk = require("which-key")
 		wk.register({
-			["^"] = {
+			L = {
 				name = "Buffer Line",
 				s = "Sort...",
 			},
