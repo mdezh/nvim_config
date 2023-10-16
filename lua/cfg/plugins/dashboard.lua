@@ -78,7 +78,7 @@ return {
 						key = "s",
 						keymap = "SPC w r",
 						key_hl = "Number",
-						action = ":SessionRestore<CR>",
+						action = ":SessionRestore",
 					},
 					{
 						icon = " ",

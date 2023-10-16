@@ -76,7 +76,11 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { { "filename", path = 4 }, "require('lsp-progress').progress()" },
+				lualine_c = {
+					"require('auto-session.lib').current_session_name()",
+					{ "filename", path = 4 },
+					"require('lsp-progress').progress()",
+				},
 				lualine_x = {
 					{
 						lazy_status.updates,

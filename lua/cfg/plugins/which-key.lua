@@ -110,7 +110,7 @@ return {
 			l = "LSP",
 			p = "Plugins",
 			T = "Tabs",
-			w = "Sessions",
+			w = "Session",
 			H = "Harpoon",
 		}, { prefix = "<leader>" })
 	end,
