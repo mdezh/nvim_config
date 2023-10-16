@@ -76,6 +76,7 @@ return {
 			["gopls"] = function()
 				lspconfig.gopls.setup({
 					capabilities = capabilities,
+					on_attach = on_attach,
 					cmd = { "gopls" },
 					filetypes = { "go", "gomod", "gowork", "gotmpl" },
 					root_dir = util.root_pattern("go.work", "go.mod", ".git"),
