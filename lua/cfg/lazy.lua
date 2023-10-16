@@ -11,17 +11,20 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "cfg.plugins" }, { import = "cfg.plugins.lsp" } }, {
-	-- install = {
-	-- 	colorscheme = { "nightfly" },
-	-- },
-	checker = {
-		enabled = true,
-		notify = false,
-	},
-	change_detection = {
-		notify = false,
-	},
-})
+require("lazy").setup(
+	{ { import = "cfg.plugins" }, { import = "cfg.plugins.lsp" }, { import = "cfg.plugins.colors" } },
+	{
+		-- install = {
+		-- 	colorscheme = { "nightfly" },
+		-- },
+		checker = {
+			enabled = true,
+			notify = false,
+		},
+		change_detection = {
+			notify = false,
+		},
+	}
+)
 
 vim.keymap.set("n", "<leader>pl", ":Lazy<CR>")
