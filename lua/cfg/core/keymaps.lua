@@ -1,4 +1,4 @@
---key
+-- leader key
 vim.g.mapleader = " "
 
 -- Русский язык (переключение по Ctrl-^ в режиме вставки)
@@ -82,7 +82,7 @@ vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<leader>wh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
 -- vim.keymap.set("n", "<leader>we", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 -- vim.keymap.set("n", "<leader>wx", ":close<CR>", { desc = "Close current split" }) -- close current split window
-vim.keymap.set("n", "<leader>X", ":close<CR>", { desc = "Close window" }) -- close current split window
+vim.keymap.set("n", "<leader><C-x>", ":close<CR>", { desc = "Close window" }) -- close current split window
 
 -- tabs
 vim.keymap.set("n", "<leader>Tt", ":tabnew<CR>", { desc = "Open new tab" }) -- open new tab
@@ -97,6 +97,7 @@ vim.keymap.set("n", "<leader>Tb", ":tabnew %<CR>", { desc = "Open current buffer
 -- vim.keymap.set("n", "<leader>bn", ":bn<CR>") --  go to next buffer
 -- vim.keymap.set("n", "<leader>bp", ":bp<CR>") --  go to previous buffer
 vim.keymap.set("n", "<leader>x", ":bdelete<CR>", { desc = "Close buffer" }) -- close current buffer
+vim.keymap.set("n", "<leader>X", ":bdelete!<CR>", { desc = "Close buffer!" }) -- close current buffer forced
 
 -- shift arrow like gui
 vim.keymap.set("n", "<S-Up>", "v<Up>")
@@ -129,4 +130,4 @@ vim.keymap.set("n", "<leader>s", ":w<CR>", { desc = "Save buffer" })
 vim.keymap.set("n", "<leader><C-s>", ":noa w<CR>", { desc = "Save w/o formatting" })
 vim.keymap.set("n", "<leader>S", ":wa<CR>", { desc = "Save all" })
 vim.keymap.set("n", "<leader>q", ":qa<CR>", { desc = "Quit" })
-vim.keymap.set("n", "<leader>Q", ":qa!<CR>", { desc = "Forced quit" })
+vim.keymap.set("n", "<leader>Q", ":qa!<CR>", { desc = "Quit!" }) -- forced quit
