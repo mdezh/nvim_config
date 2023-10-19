@@ -13,7 +13,7 @@ return {
 
 		local mason_tool_installer = require("mason-tool-installer")
 
-		vim.keymap.set("n", "<leader>pm", ":Mason<CR>")
+		vim.keymap.set("n", "<leader>Pm", ":Mason<CR>")
 
 		-- enable mason and configure icons
 		mason.setup({
