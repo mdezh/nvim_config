@@ -122,8 +122,8 @@ vim.keymap.set("i", "<C-z>", "<Esc>ui", { noremap = true, silent = true })
 vim.keymap.set({ "i", "v", "x", "t" }, "<C-a>", "<C-\\><C-n>ggVG", { noremap = true, silent = true })
 
 -- add new lines in normal mode
-vim.keymap.set("n", "zk", "mmO<Esc>`m") -- add line before current position
-vim.keymap.set("n", "zj", "mmo<Esc>`m") -- add line after current position
+vim.keymap.set("n", "zk", "mmO<Esc>`m", { desc = "Add line before current" })
+vim.keymap.set("n", "zj", "mmo<Esc>`m", { desc = "Add line after current" })
 
 -- Other
 vim.keymap.set("n", "<leader>s", ":w<CR>", { desc = "Save buffer" })
